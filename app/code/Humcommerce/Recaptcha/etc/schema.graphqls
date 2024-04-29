@@ -1,0 +1,11 @@
+type Query {
+    getRecaptchaConfig: RecaptchaConfig @resolver(class: "Humcommerce\\Recaptcha\\Model\\Resolver\\RecaptchaConfigResolver")  
+}
+
+
+type RecaptchaConfig {
+    google_api_website_key: String
+    google_api_secret_key: String
+    minimum_score: Float
+    invisible_badge: String
+}

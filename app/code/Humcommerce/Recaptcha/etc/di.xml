@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\StoreGraphQl\Model\Resolver\Store\StoreConfigDataProvider">
+        <arguments>
+            <argument name="extendedConfigData" xsi:type="array">
+                <item name="google_api_website_key" xsi:type="string">Humcommerce_/select_category/google_api_website_key</item>
+                <item name="google_api_secret_key" xsi:type="string">website_security/select_category/google_api_secret_key</item>
+                <item name="minimum_score" xsi:type="string">website_security/select_category/minimum_score</item>
+                <item name="invisible_badge" xsi:type="string">website_security/select_category/invisible_badge</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

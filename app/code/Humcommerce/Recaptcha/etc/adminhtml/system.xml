@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="security" translate="label" sortOrder="9999999">
+            <label>Security</label>
+        </tab>
+        <section id="website_security" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+            <label>Website reCAPTCHA</label>
+            <tab>security</tab>
+            <resource>Humcommerce_Recaptcha::configuration</resource>
+            <group id="select_category" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+                <label>reCAPTCHA v3 Invisible</label>
+
+                <field id="google_api_website_key" translate="label" type="obscure" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Google API Website Key</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
+                </field>
+
+                <field id="google_api_secret_key" translate="label" type="obscure" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Google API Secret Key</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
+                </field>
+                <field id="minimum_score" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Minimum Score Threshold</label>
+                    <comment>
+                        From 0.0 to 1.0, where 1.0 is very likely a good interaction, and 0.0 is very likely a bot. 
+                    </comment>
+                </field>
+                <field id="invisible_badge" translate="label" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Invisible Badge Position</label>
+                    <source_model>Humcommerce\Recaptcha\Model\Config\Source\BadgePosition</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

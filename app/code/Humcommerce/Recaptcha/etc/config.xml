@@ -1,0 +1,10 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <website_security>
+            <select_category>
+                <minimum_score>0.5</minimum_score>
+            </select_category>
+        </website_security>
+    </default>
+</config>
+
